@@ -10,4 +10,4 @@ cd ${DOCKER_DIRECTORY}
 # Remove stopped containers
 docker-compose rm
 
-cd ${APP_DIRECTORY}
+cd ${DEVSTACK_DIRECTORY}

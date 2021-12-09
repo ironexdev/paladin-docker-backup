@@ -38,4 +38,4 @@ cd ${DOCKER_DIRECTORY}
 
 docker-compose restart api-server
 
-cd ${APP_DIRECTORY}
+cd ${DEVSTACK_DIRECTORY}

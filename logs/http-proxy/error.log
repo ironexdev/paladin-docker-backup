@@ -1,0 +1,13 @@
+2021/12/09 15:47:09 [warn] 1#1: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /etc/nginx/nginx.conf:2
+2021/12/09 15:47:09 [notice] 1#1: using the "epoll" event method
+2021/12/09 15:47:09 [notice] 1#1: nginx/1.20.0
+2021/12/09 15:47:09 [notice] 1#1: built by gcc 10.2.1 20201203 (Alpine 10.2.1_pre1) 
+2021/12/09 15:47:09 [notice] 1#1: OS: Linux 5.10.25-linuxkit
+2021/12/09 15:47:09 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/12/09 15:47:09 [notice] 1#1: start worker processes
+2021/12/09 15:47:09 [notice] 1#1: start worker process 31
+2021/12/09 15:47:09 [notice] 1#1: start worker process 32
+2021/12/09 15:47:09 [notice] 1#1: start worker process 33
+2021/12/09 15:47:09 [notice] 1#1: start worker process 34
+2021/12/09 15:47:09 [notice] 1#1: start worker process 35
+2021/12/09 15:47:09 [notice] 1#1: start worker process 36

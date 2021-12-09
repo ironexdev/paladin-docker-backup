@@ -8,7 +8,7 @@ services:
         DOCKER_IMAGE_CONTEXT_PATH: $DOCKER_IMAGE_CONTEXT_PATH
         GROUP_ID: $GROUP_ID
         USER_ID: $USER_ID
-      context: $APP_DIRECTORY
+      context: $DEVSTACK_DIRECTORY
       dockerfile: $DOCKER_DIRECTORY/images/api-server/Dockerfile
     container_name: paladin_api-server
     depends_on:
@@ -52,11 +52,10 @@ services:
         DOCKER_IMAGE_CONTEXT_PATH: $DOCKER_IMAGE_CONTEXT_PATH
         GROUP_ID: $GROUP_ID
         USER_ID: $USER_ID
-      context: $APP_DIRECTORY
+      context: $DEVSTACK_DIRECTORY
       dockerfile: $DOCKER_DIRECTORY/images/http-proxy/Dockerfile
     container_name: paladin_http-proxy
     depends_on:
-      - app-server
       - mongo-express
       - redis-admin
     networks:
@@ -72,7 +71,7 @@ services:
     build:
       args:
         DOCKER_IMAGE_CONTEXT_PATH: $DOCKER_IMAGE_CONTEXT_PATH
-      context: $APP_DIRECTORY
+      context: $DEVSTACK_DIRECTORY
       dockerfile: $DOCKER_DIRECTORY/images/mongo/Dockerfile
     container_name: paladin_mongo
     networks:
@@ -93,7 +92,7 @@ services:
     build:
       args:
         DOCKER_IMAGE_CONTEXT_PATH: $DOCKER_IMAGE_CONTEXT_PATH
-      context: $APP_DIRECTORY
+      context: $DEVSTACK_DIRECTORY
       dockerfile: $DOCKER_DIRECTORY/images/mongo-express/Dockerfile
     container_name: paladin_mongo-express
     depends_on:
@@ -112,7 +111,7 @@ services:
 
   redis:
     build:
-      context: $APP_DIRECTORY
+      context: $DEVSTACK_DIRECTORY
       dockerfile: $DOCKER_DIRECTORY/images/redis/Dockerfile
     container_name: paladin_redis
     networks:
@@ -120,7 +119,7 @@ services:
 
   redis-admin:
     build:
-      context: $APP_DIRECTORY
+      context: $DEVSTACK_DIRECTORY
       dockerfile: $DOCKER_DIRECTORY/images/redis-admin/Dockerfile
     container_name: paladin_redis-admin
     depends_on:
