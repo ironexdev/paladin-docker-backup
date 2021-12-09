@@ -4,7 +4,7 @@
 
 cd ${DOCKER_DIRECTORY}
 
-# Run command in api-server container
+# Run composer in api-server container
 docker-compose exec -w /home/dockeruser/backend api-server composer $@
 
 cd ${APP_DIRECTORY}

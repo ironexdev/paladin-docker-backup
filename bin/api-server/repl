@@ -1,5 +1,0 @@
-#!/bin/sh
-
-. bin/variables
-
-${DOCKER_BIN_DIRECTORY}/api-server/run vendor/bin/psysh

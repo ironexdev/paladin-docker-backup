@@ -4,7 +4,7 @@
 
 cd ${DOCKER_DIRECTORY}
 
-# Build images if needed and create and start containers
+# Restart containers
 docker-compose restart $@
 
 cd ${APP_DIRECTORY}

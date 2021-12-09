@@ -1,6 +1,0 @@
-#!/bin/sh
-
-. bin/variables
-
-# Add eval(\Psy\sh()) to your code before running this
-${DOCKER_BIN_DIRECTORY}/api-server/run php public/index.php
