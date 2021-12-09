@@ -1,0 +1,10 @@
+#!/bin/sh
+
+. bin/variables
+
+cd ${DOCKER_DIRECTORY}
+
+# Run command in api-server service
+docker-compose exec -w /home/dockeruser/backend api-server $@
+
+cd ${APP_DIRECTORY}
