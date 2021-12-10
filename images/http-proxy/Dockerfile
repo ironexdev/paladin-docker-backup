@@ -1,4 +1,4 @@
-FROM nginx:1.20.0-alpine
+FROM nginx:1.21.4-alpine
 
 ARG DOCKER_IMAGE_CONTEXT_PATH
 ARG GROUP_ID=1337

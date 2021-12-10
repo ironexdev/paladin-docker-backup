@@ -1,4 +1,5 @@
 FROM php:8.0.10-fpm-alpine
+# FROM php:8.1.0-fpm-alpine3.15
 
 ARG BACKEND_CONTEXT_PATH
 ARG DOCKER_IMAGE_CONTEXT_PATH
@@ -46,7 +47,7 @@ RUN docker-php-ext-install sockets
 
 # Xdebug
 RUN apk add --no-cache $PHPIZE_DEPS \
-  && pecl install xdebug-3.0.4 \
+  && pecl install xdebug-3.1.2 \
   && docker-php-ext-enable xdebug
 
 # PHP Redis

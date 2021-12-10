@@ -1,4 +1,4 @@
-FROM mongo:5.0.3
+FROM mongo:5.0.5
 
 ARG DOCKER_IMAGE_CONTEXT_PATH
 
