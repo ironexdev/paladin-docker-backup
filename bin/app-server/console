@@ -1,0 +1,6 @@
+#!/bin/sh
+
+. bin/variables
+
+# Run Symfony Console command in app-server container
+${DOCKER_BIN_DIRECTORY}/app-server/run php src/console.php $@

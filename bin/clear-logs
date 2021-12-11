@@ -2,5 +2,5 @@
 
 . bin/variables
 
-find ${API_SERVER_LOG_DIRECTORY} \! -name ".gitignore" -delete
+find ${APP_LOG_DIRECTORY} \! -name ".gitignore" -delete
 find ${HTTP_PROXY_LOG_DIRECTORY} \! -name ".gitignore" -delete

@@ -1,16 +1,16 @@
 version: "3.9"
 
 services:
-  api-server:
+  app-server:
     build:
       args:
-        BACKEND_CONTEXT_PATH: $BACKEND_CONTEXT_PATH
+        APP_CONTEXT_PATH: $APP_CONTEXT_PATH
         DOCKER_IMAGE_CONTEXT_PATH: $DOCKER_IMAGE_CONTEXT_PATH
         GROUP_ID: $GROUP_ID
         USER_ID: $USER_ID
       context: $DEVSTACK_DIRECTORY
-      dockerfile: $DOCKER_DIRECTORY/images/api-server/Dockerfile
-    container_name: paladin_api-server
+      dockerfile: $DOCKER_DIRECTORY/images/app-server/Dockerfile
+    container_name: paladin_app-server
     depends_on:
       - mongo
     environment:
@@ -43,9 +43,9 @@ services:
       - paladin_mailer_password
       - paladin_mongo_password
     volumes:
-      - $BACKEND_DIRECTORY:/home/dockeruser/backend
-      - $DOCKER_DIRECTORY/images/api-server/php.ini:/usr/local/etc/php/php.ini
-      - $API_SERVER_LOG_DIRECTORY:/var/log
+      - $APP_DIRECTORY:/home/dockeruser/app
+      - $DOCKER_DIRECTORY/images/app-server/php.ini:/usr/local/etc/php/php.ini
+      - $APP_LOG_DIRECTORY:/var/log
 
   http-proxy:
     build:

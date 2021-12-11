@@ -1,0 +1,10 @@
+#!/bin/sh
+
+. bin/variables
+
+cd ${DOCKER_DIRECTORY}
+
+# Run command in app-server service
+docker-compose exec -w /home/dockeruser/app app-server $@
+
+cd ${DEVSTACK_DIRECTORY}
